@@ -1,4 +1,4 @@
-import './Sidebar.css';
+import '../../styles/Sidebar.css';
 import { NavLink } from 'react-router-dom';
 
 const recentTracks = [

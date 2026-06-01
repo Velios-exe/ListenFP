@@ -1,4 +1,4 @@
-import './Player.css';
+import '../../styles/Player.css';
 
 export const Player = () => {
   return (

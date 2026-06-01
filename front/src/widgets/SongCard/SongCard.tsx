@@ -1,4 +1,4 @@
-import './SongCard.css';
+import '../../styles/SongCard.css';
 import { useNavigate } from 'react-router-dom';
 
 interface SongCardProps {

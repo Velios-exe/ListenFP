@@ -1,4 +1,4 @@
-import './ChordViewer.css';
+import '../../styles/ChordViewer.css';
 import { useState } from 'react';
 
 /* ── Static mock chords for visual prototype ── */

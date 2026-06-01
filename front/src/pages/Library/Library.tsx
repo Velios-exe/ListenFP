@@ -1,4 +1,4 @@
-import './Library.css';
+import '../../styles/Library.css';
 import { useState } from 'react';
 import { SongCard } from '../../widgets/SongCard/SongCard';
 

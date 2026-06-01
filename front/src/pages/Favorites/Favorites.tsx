@@ -1,4 +1,4 @@
-import './Favorites.css';
+import '../../styles/Favorites.css';
 import { SongCard } from '../../widgets/SongCard/SongCard';
 import { useNavigate } from 'react-router-dom';
 

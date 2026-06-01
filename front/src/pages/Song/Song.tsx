@@ -1,4 +1,4 @@
-import './Song.css';
+import '../../styles/Song.css';
 import { ChordViewer } from '../../widgets/ChordViewer/ChordViewer';
 
 /* Static mock for visual prototype */
