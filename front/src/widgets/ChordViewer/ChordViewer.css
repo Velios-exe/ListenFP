@@ -1,0 +1,206 @@
+.chord-viewer {
+  padding: 0;
+}
+
+/* Tabs */
+.chord-viewer__tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.chord-viewer__tab {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+
+.chord-viewer__tab:hover {
+  color: var(--text-primary);
+}
+
+.chord-viewer__tab.active {
+  color: var(--accent-light);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Chord Strip ── */
+.chord-viewer__strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 28px;
+  font-family: 'Inter', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.chord-viewer__chord-token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast), transform var(--t-fast);
+  min-width: 48px;
+}
+
+.chord-viewer__chord-token:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.chord-viewer__chord-token.active {
+  background: rgba(124, 58, 237, 0.2);
+  color: var(--accent-light);
+  transform: scale(1.05);
+}
+
+.chord-viewer__chord-token.active .chord-viewer__chord-name {
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+
+.chord-viewer__chord-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.chord-viewer__chord-beat {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ── Chord Diagrams Grid ── */
+.chord-viewer__diagrams {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+.chord-diagram {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+  cursor: pointer;
+}
+
+.chord-diagram:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.chord-diagram.active {
+  border-color: var(--accent);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.chord-diagram__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.chord-diagram__fretboard {
+  width: 72px;
+  height: 80px;
+}
+
+.chord-diagram__fretboard-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* SVG fret lines */
+.fret-line {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+}
+
+.string-line {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+}
+
+.nut-line {
+  stroke: var(--text-secondary);
+  stroke-width: 3;
+}
+
+.finger-dot {
+  fill: var(--accent);
+}
+
+.open-dot {
+  stroke: var(--text-secondary);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.mute-x {
+  stroke: var(--text-muted);
+  stroke-width: 1.5;
+}
+
+.chord-diagram__fingers {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Lyrics ── */
+.chord-viewer__lyrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.chord-viewer__lyrics-line {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  transition: background var(--t-fast);
+  cursor: default;
+}
+
+.chord-viewer__lyrics-line:hover {
+  background: var(--bg-hover);
+}
+
+.chord-viewer__lyrics-chord {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.04em;
+  min-height: 18px;
+}
+
+.chord-viewer__lyrics-text {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}

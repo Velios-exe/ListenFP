@@ -1,0 +1,128 @@
+.search-page {
+  padding: 32px 36px 40px;
+  max-width: 1200px;
+}
+
+.search-page__header {
+  margin-bottom: 32px;
+}
+
+.search-page__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.search-page__filters {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.search-page__filter {
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+
+.search-page__filter:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.search-page__filter.active {
+  background: rgba(124, 58, 237, 0.2);
+  color: var(--accent-light);
+  border-color: var(--border-accent);
+}
+
+/* Browse categories */
+.search-page__categories {
+  margin-top: 40px;
+}
+
+.search-page__cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.search-cat {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 110px;
+  cursor: pointer;
+  transition: transform var(--t-base);
+}
+
+.search-cat:hover {
+  transform: scale(1.03);
+}
+
+.search-cat__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--t-slow);
+}
+
+.search-cat:hover .search-cat__bg {
+  transform: scale(1.08);
+}
+
+.search-cat__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.search-cat__label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Results */
+.search-page__results {
+  margin-top: 32px;
+}
+
+.search-page__results-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.search-page__results-count strong {
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-page {
+    padding: 20px 16px 32px;
+  }
+
+  .search-page__title {
+    font-size: 1.4rem;
+  }
+
+  .search-page__cats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

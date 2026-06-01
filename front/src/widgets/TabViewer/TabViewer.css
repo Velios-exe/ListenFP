@@ -1,0 +1,119 @@
+.tab-viewer {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.tab-viewer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-viewer__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.tab-viewer__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-viewer__ctrl-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.tab-viewer__ctrl-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.tab-viewer__content {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.tab-viewer__pre {
+  font-family: 'Courier New', 'Lucida Console', monospace;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  white-space: pre;
+  tab-size: 2;
+}
+
+/* String coloring */
+.tab-viewer__string {
+  display: block;
+}
+
+.tab-viewer__string-name {
+  display: inline-block;
+  width: 18px;
+  color: var(--accent-light);
+  font-weight: 700;
+}
+
+.tab-viewer__string-divider {
+  color: var(--text-muted);
+  margin-right: 2px;
+}
+
+.tab-viewer__string-notes {
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+/* Highlighted position */
+.tab-viewer__cursor {
+  display: inline-block;
+  background: rgba(124, 58, 237, 0.25);
+  border-radius: 2px;
+  color: var(--accent-light);
+  padding: 0 1px;
+  transition: background 0.1s;
+}
+
+/* Legend */
+.tab-viewer__legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.tab-viewer__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.tab-viewer__legend-key {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  background: rgba(124, 58, 237, 0.15);
+  border-radius: 4px;
+  padding: 1px 5px;
+}

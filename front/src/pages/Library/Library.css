@@ -1,0 +1,113 @@
+.library-page {
+  padding: 32px 36px 40px;
+  max-width: 1200px;
+}
+
+.library-page__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.library-page__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.library-page__subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.library-page__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.library-page__view-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.library-page__view-btn:hover,
+.library-page__view-btn.active {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.library-page__view-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.library-page__sort {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  transition: border-color var(--t-fast);
+}
+
+.library-page__sort:focus {
+  border-color: var(--accent);
+}
+
+/* Table header */
+.library-page__table-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 160px 100px 80px 60px;
+  gap: 12px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.library-page__col-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.library-page__col-label--right {
+  text-align: right;
+}
+
+/* Grid view */
+.library-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .library-page {
+    padding: 20px 16px 32px;
+  }
+  .library-page__table-header {
+    display: none;
+  }
+}
